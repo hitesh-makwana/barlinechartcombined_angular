@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Monitor</title>
+    
+    <link rel="icon"  type="image/png" href="img/favicon.png">
+    
+    <!-- Material Icons CDN -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>    
+	<link rel="stylesheet" href="css/style.css"/>    
+</head>
+<body  ng-app="riskMonitor" ng-controller="mainCtrl as main">
+	 <!-- Header -->
+	<header id="header">
+		<div class="navigation">
+			<div class="pull-left">
+				<a ng-href="#" class="logo"><i class="material-icons md-21">equalizer</i>Risk Monitor</a>
+			</div>
+			<div class="pull-right actions">
+				<button><i class="material-icons md-18">apps</i></button>
+				<button><i class="material-icons md-18">list</i></button>
+				<button><i class="material-icons md-18">person</i></button>
+			</div>
+		</div>	
+	</header>
+	<div >
+		<highlights ng-repeat="data in main.highlightsData" data="data"></highlights>				
+	</div>
+	<!-- Content -->
+	<section class="container">
+		<div class="row">		
+			<div class="col-sm-5 col-md-4 left-section">
+				<div class="date_range" >
+					<select  ng-model="date_range_selected" ng-options="datelabel as (datelabel|formatdate) for datelabel in main.date_range">
+					</select>	
+					<i class="material-icons md-18">date_range</i>
+					
+				</div>
+				<div class="statistics">
+					<statistics ng-repeat="data in main.statData" data="data"></statistics>
+									
+				</div>
+			</div>
+			<div class="col-sm-7 col-md-8">
+				<div class="row">
+					<div class="pull-left chart-heading">
+						<h4>Exposure<i class="material-icons md-24">arrow_drop_down</i></h4>
+					</div>
+					<div class="pull-right chart-actions">
+						<a><i class="material-icons md-18">view_comfy</i></a>
+						<a class="active" ><i class="material-icons md-18">poll</i></a>
+						<a><i class="material-icons md-18">data_usage</i></a>
+					</div>
+				</div>	
+				<div class="row">	
+					<div class="col-md-12">
+						<!-- Chart Data -->
+						<div class="chart-container">
+							<div chart chart-data="main.chartData" ng-if="main.chartData"></div>
+						</div>
+						<!-- Chart Data Details-->
+						
+						<div class="chartdetails" ng-class="{'nodata':!main.chartData}">
+							<div class="indicators ind_1">
+								<p class="num">21,213.63</p>
+								<p  class="text">Indicator 1</p>
+							</div>
+							<div class="indicators ind_3">
+								<p  class="text-right num ">9,567.54</p>
+								<p class="text-right text">Indicator 3</p>
+							</div>
+							<div class="indicators ind_2">
+								<p  class="num big">11.2%</p>
+								<p  class="text">Exposure Indicator 2</p>
+							</div>
+							<div class="indicators  ind_4">
+								<p class="text-right num big">505.65</p>
+								<p class="text-right text">Exposure Indicator 4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>  
+	</section>
+
+	<!-- Libs -->	
+    <script src="js/bower_components/angular.js"></script>
+    <script src="js/bower_components/chart.js"></script>
+
+	<!-- Application -->
+    <script src="js/app.js"></script>
+  	<script src="js/main.controllers.js"></script>
+    <script src="js/chart.directive.js"></script>
+    <script src="js/formatdate.filter.js"></script>
+	<script src="js/highlights.directive.js"></script>
+	<script src="js/exposure.services.js"></script>
+	<script src="js/statistics.directive.js"></script>
+</body>
+</html>

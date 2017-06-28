@@ -1,0 +1,431 @@
+
+@font-face{font-family:"Expert-Sans-Light";src:url("fonts/expertsans-light-webfont.eot");src:url("fonts/expertsans-light-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-light-webfont.woff") format("woff"),url("fonts/expertsans-light-webfont.ttf") format("truetype");font-style:normal;font-weight:normal}
+
+@font-face{font-family:"Expert-Sans-Regular";src:url("fonts/expertsans-regular-webfont.eot");src:url("fonts/expertsans-regular-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-regular-webfont.woff") format("woff"),url("fonts/expertsans-regular-webfont.ttf") format("truetype");font-style:normal;font-weight:normal}
+
+@font-face{font-family:"Expert-Sans-Bold";src:url("fonts/expertsans-bold-webfont.eot");src:url("fonts/expertsans-bold-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-bold-webfont.woff") format("woff"),url("fonts/expertsans-bold-webfont.ttf") format("truetype");font-style:normal;font-weight:normal}
+
+body{
+	font-family: "Expert-Sans-Regular","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #707070;
+    margin: 0;
+    line-height: 18px;
+    font-size:12px;
+    min-width: 300px;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Expert-Sans-Light","Helvetica",Helvetica,Arial,sans-serif;
+    }
+
+ header{
+	background-color:#555555;
+	color:#999999;
+	padding:0px 0px 0px 15px;
+	display:block;
+	height: 53px;
+	display:block;
+ }
+ header .navigation{
+ 	width: 100%;
+ }
+ header .logo{
+	color:#999999;
+	font-size:25px;
+	margin:10px;
+	display:inline-block;
+	text-decoration: none;
+ }
+ header .logo i{
+	position:relative;
+	top:4px;
+ }
+ header .logo:hover{
+	color:white;
+	text-decoration:none;
+ }
+
+ header .actions button{
+	padding:12px 15px;
+	margin:0px;
+	background-color:#707070;
+	border:none;
+	margin-right:-4px;
+
+ }
+header .actions button:last-child{
+ 	margin-right:0px;
+ }
+
+ header .actions button:hover{
+	color:white;
+	background-color:#ff6600;
+ }
+
+.highlight-container{
+    padding:10px 20px;
+	background-color:#707070;
+	color:white;
+	width: 25%;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.highlight-container.lightgray{
+	background-color:#cccccc;
+}
+.highlight-container.risk{
+	background-color:#ed1c24;
+}
+.highlight-container .heading{
+	text-transform: uppercase;
+}
+.highlight-container .count{
+	font-size: 30px;
+	font-family: "Expert-Sans-Light","Helvetica",Helvetica,Arial,sans-serif;	
+	text-align: right;
+	padding-top: 5px;
+	clear: both;
+	margin-right: -5px;
+}
+.highlight-container .count i{
+	font-size: 30px;
+	position: relative;
+	top:5px;
+}
+.container{
+	margin-top:20px;
+	width: 100% !important;
+}
+.container .left-section{
+	max-width: 450px;
+}
+.container .left-section > div{
+	padding:0 10px;
+}
+.statistics{
+	max-width: 400px;
+	margin:0 auto;
+}
+.statistics-container{
+	padding:15px 15px 15px 0px;	
+	position:relative;
+	display: inline-block;
+
+}
+.statistics-container{
+	width: 50%;
+}
+.statistics-container .btn-container{
+	position:absolute;
+	top:23px;
+	left:0px;
+}
+.statistics-container .btn-container button{
+	border-radius:50px;
+	border:0px;
+	background-color:#ff6600;
+	color:white;
+	margin-bottom:5px;
+	margin-right:5px;
+	width:17px;
+	height:17px;
+	display:block;
+	position: relative;
+	
+}
+.statistics-container .btn-container button span{
+	position: absolute;
+	right: 0;
+	color: #ff6600;
+	right: 22px;
+	top:-1px;
+	display: none;
+
+}
+.statistics-container .btn-container button:hover{
+		background-color: #ff3300;
+	}
+.statistics-container .btn-container button i{
+	font-size:13px;
+	position: relative;
+	left: -5px;
+	left: -4px;
+    top: 1px;
+}
+.statistics-container .statbox{
+	width: 110px;
+	margin-left: 20px;
+}
+.statistics-container .statbox .a{
+	background-color:#707070;
+	
+}
+.statistics-container .statbox  .bigbox, .statistics-container  .statbox  .smallbox{
+	background-color:#707070;
+	color:white;	
+}
+.statistics-container.active .bigbox, .statistics-container.active .smallbox{
+	background-color:#999999;	
+}
+.statistics-container  .statbox .smallbox{
+	margin:0px auto;	
+	height:7px;
+	width:90px;
+	text-align:center;
+	border:1px solid #cccccc;
+	border-bottom:none;
+}
+.statistics-container  .statbox  .bigbox{
+	height:110px;
+	width:110px;
+	font-size: 12px;
+	border:1px solid #cccccc;
+}
+.statistics-container  .statbox  .bigbox i{
+	position: relative;
+	top:8px;
+	left:3px;
+}
+.statistics-container  .statbox p.field{
+	font-size:11px;	
+	width:48%;
+	display: inline-block;
+}
+.statistics-container  .statbox p.field .value{
+	font-size:24px;	
+	display: inline-block;
+}
+.statistics-container  .statbox p.accts{
+	color:#ff6600;
+}
+.date_range{
+	position: relative;
+}
+.date_range i{
+	position: absolute;
+	top:2px;
+	left:18px;
+}
+.date_range select{
+	border:1px solid #CCCCCC;
+	padding:5px 3px 5px 30px;
+	max-width:240px;
+}
+.chart-heading, .chart-actions{
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0px 15px;
+}
+.chart-heading{
+	margin-left: -6%;
+}
+.chart-heading h4{
+	margin:0px;
+	text-transform: uppercase;
+	position: relative;
+}
+.chart-heading h4 i{
+	font-size:30px;
+	position: absolute;
+	top:-6px;
+}
+.chart-actions a{
+	color:#555555;
+	cursor: pointer;
+}
+.chart-actions a:hover, .chart-actions a.active{
+	color:#ff6600;
+}
+.chart-actions a i{
+	font-size:24px;
+}
+.chart-container{
+	margin-bottom: 15px;
+	width: calc(100% - 189px);
+	display: inline-block;
+	margin-left: -10%;
+}
+.chartdetails{
+	margin:0 auto;
+	margin-bottom: 15px;
+	padding-left:15px;	
+	max-width: 255px;	
+	display: inline-block;
+	position: relative;
+	top:-40px;
+}
+.chartdetails.nodata{
+	top:0px;
+}
+.chartdetails .indicators{
+	text-align: left;
+	text-transform: uppercase;
+	color: #CCCCCC;	
+	margin-bottom: 20px;
+	width: 49%;
+
+	display: inline-block;
+}
+.chartdetails .indicators .num{
+	font-size: 24px;
+	margin:0;
+}
+.chartdetails .indicators .num.big{
+	font-size: 36px;
+	line-height: 32px;
+	font-weight:bold;
+}
+.chartdetails .indicators .text{
+	font-size: 9px;
+	margin:0;
+}
+.chartdetails .indicators.ind_2{
+	color: #ff6600;
+}
+.chartdetails .indicators.ind_4{
+	color: #555555;
+}
+
+/*=========MEDIA QURIES==========*/
+@media only screen and (max-width: 1100px) {
+	.chart-container{
+	    width: 100%;
+	    margin-left: -5%;
+	}
+	.chart-heading{
+		margin-left: 0;
+	}
+	.chartdetails{
+		width: 100%;
+		top:0px;
+		padding-left: 0px;
+	}
+
+}
+@media only screen and (max-width: 980px) {
+	.highlight-container div span{
+		display: block;
+		float: left !important;
+		width: 100%;
+	}
+
+	.highlight-container .count{
+		font-size: 20px;
+		float: left !important;
+		text-align: left;
+		
+	}
+	.highlight-container .count i{
+		font-size: 25px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	 body{
+	 	padding-top:53px;
+	 }
+	 header{
+	 	box-shadow: 1px 1px 5px #999999;
+	 	padding:0px;
+	 	position: fixed;
+	    right: 0;
+	    left: 0;
+	    top:0;
+	    z-index: 1030;
+	 }
+	 .date_range{
+	 	width: 100%;
+	 }
+	 .container .left-section{
+		margin: 0 auto;
+	}
+	 .statistics{
+	 	
+	 }
+	 .statistics-container{
+
+	 }
+	 .chartdetails{
+	 	width: 270px;
+	 	display: block;
+	 }
+	 .highlight-container div span
+	 {
+	 	font-size: 11px;
+	}
+	
+	 .highlight-container .count {
+		font-size: 12px;		
+	}
+	 .highlight-container .count i{
+		font-size: 15px;		
+	}
+	.statistics-container .btn-container button span{
+		display: block;
+	}
+	.statistics-container .btn-container button:hover{
+		font-weight: bold;
+	}
+	.chart-container{
+	    margin-left: -2%;
+	}
+	
+}
+
+@media only screen and (max-width: 611px) {
+	.highlight-container div span.heading{
+		height: 38px;
+		font-size: 11px;
+	}
+}
+@media only screen and (max-width: 520px) {
+	
+	.highlight-container{
+	    width: 100%;
+		display: inline-block;
+		padding:10px 15px;
+		clear: both;
+	}
+
+	.chartdetails .indicator{
+		text-align: left;
+	}
+	.highlight-container div {
+		overflow: hidden;
+		width: 100%;
+	}
+	.highlight-container div span{
+		width:auto;
+		
+	}
+	.highlight-container div span.heading{
+		height: auto;	
+	}
+	.highlight-container div span+span{
+		float:right !important;
+	}
+	.highlight-container .count{
+		float: none;
+		font-size: 20px;
+	}
+	.highlight-container .count i{
+	font-size: 20px;	
+	}
+	.statistics-container .btn-container button span{
+		display: none;
+	}
+	.statistics-container .btn-container button:hover{
+		background-color: #ff3300;
+	}
+
+}
+@media only screen and (max-width:380px) {
+	body{
+		padding-top: 53px;
+	}
+	header .actions button{
+		padding:16px 8px;
+		height: 53px;
+	}
+}
